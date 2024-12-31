@@ -10,7 +10,7 @@ const Container = styled.div`
   height: calc(100vh - 128px);
   margin: 0 auto;
   overflow: hidden;
-  touch-action: none;
+  touch-action: pan-x;
 `;
 
 interface PresidentFeedProps {

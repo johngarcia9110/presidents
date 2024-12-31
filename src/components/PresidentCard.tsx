@@ -23,15 +23,16 @@ const Card = styled.div<{
   background: #132f4c;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 40%;
   object-fit: cover;
+  flex-shrink: 0;
 `;
 
 const Content = styled.div`
@@ -39,6 +40,16 @@ const Content = styled.div`
   color: #e3e3e3;
   flex: 1;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
   h2 {
     font-size: 24px;

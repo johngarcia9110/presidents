@@ -8,11 +8,18 @@ import { GlobalStyles } from "./styles/GlobalStyles";
 
 const AppContainer = styled.div`
   min-height: 100vh;
+  height: 100vh;
   background-color: #0a1929;
   padding: 64px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 `;
 
 enum AppState {
