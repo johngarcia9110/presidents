@@ -22,7 +22,6 @@ const Card = styled.div<{
   user-select: none;
   background: #132f4c;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -30,8 +29,9 @@ const Card = styled.div<{
 
 const Image = styled.img`
   width: 100%;
-  height: 40%;
+  height: 250px;
   object-fit: cover;
+  object-position: top;
   flex-shrink: 0;
 `;
 

@@ -7,9 +7,8 @@ const Container = styled.div`
   position: relative;
   width: 100%;
   max-width: 600px;
-  height: calc(100vh - 128px);
+  height: calc(100vh - 64px);
   margin: 0 auto;
-  overflow: hidden;
   touch-action: pan-x;
 `;
 
@@ -28,6 +27,7 @@ export const PresidentFeed: React.FC<PresidentFeedProps> = ({
   const [direction, setDirection] = useState<"left" | "right" | "none">("none");
   const startX = useRef(0);
   const containerWidth = 600;
+  const cardGap = 40; // Gap between cards
 
   const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
     setIsDragging(true);
@@ -72,7 +72,7 @@ export const PresidentFeed: React.FC<PresidentFeedProps> = ({
   };
 
   const getCardOffset = (index: number) => {
-    const baseOffset = (index - currentIndex) * containerWidth;
+    const baseOffset = (index - currentIndex) * (containerWidth + cardGap);
     return baseOffset + offset;
   };
 
